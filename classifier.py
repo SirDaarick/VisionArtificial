@@ -20,18 +20,20 @@ def centro_masa(vectores):
 
 
 def distancia(punto, centro):
-    dist = (((centro[0]-punto[0])**2) + ((centro[1]-punto[1])**2))**(1/2)
-    return dist
+    return (((centro[0]-punto[0])**2) + ((centro[1]-punto[1])**2))**(1/2)
 
 
 def clasificar(alumno, *clases) :
+    minimo = 0
     distancias = []
     for i in clases :
         distancias.append(distancia(alumno, centro_masa(i)))
         
-    minimo = min(distancias)
+    if minimo == min(distancias) : 
+        return clases[]
     
-    return clases[distancias.index(minimo)]
+    
+    #return clases[distancias.index(minimo)]
         
     
 
